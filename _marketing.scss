@@ -1,0 +1,431 @@
+.marketing {
+  @include intro-header;
+  .site-header {
+    h1.separated {
+      font-size: rem-calc(33);
+      @include elastic-font-size($min-font: 33, $max-font: 65, $min-width: 640, $max-width: 1440);
+      @include breakpoint(xxlarge) {
+        font-size: rem-calc(65);
+      }
+    }
+  }
+  h1.separated {
+    padding-top: rem-calc(20);
+    padding-bottom: 0;
+    @include breakpoint(medium) {
+      padding-bottom: rem-calc(45);
+    }
+  }
+
+  .bordered-container {
+    border: 1px solid $light-gray;
+    padding: rem-calc(90) 0 rem-calc(60);
+  }
+  .button {
+    margin-top: rem-calc(60);
+  }
+  .main-section {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .tagline-background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 109%;
+    font-size: rem-calc(370);
+    color: $very-light-gray;
+    font-family: $header-font-family;
+    font-weight: $global-weight-extra-bold;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.1;
+    .right {
+      text-align: right;
+    }
+  }
+
+  .section-blocks {
+    z-index: 0;
+    position: relative;
+    top: 0;
+    // min-height: 174.5rem; (commented out because this creates unneccesary white space in certain places - rediris)
+    text-align: center;
+    section {
+      margin: rem-calc(150) 0;
+      background-color: rgba(255,255,255,0.5);
+      box-shadow: 0 0 rem-calc(15) 0 rgba(0,0,0,0.1);
+      div {
+        padding: 4.125rem 0 0;
+      }
+      .image {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    h2.separated {
+      @include separated(150, 15%, $secondary-color, 1, 3, 6);
+    }
+    .button {
+      margin-top: rem-calc(40);
+    }
+  }
+
+  &.process {
+    text-align: center;
+    background-color: $very-light-gray;
+    font-size: rem-calc(16);
+    line-height: 1.4;
+    @include breakpoint(medium) {
+      font-size: rem-calc(24);
+      line-height: 2;
+    }
+    @include section-padding(true, false);
+
+    h1.separated {
+      text-transform: none;
+    }
+
+    header .column {
+      @extend .expanded;
+    }
+    .content-body {
+      @include breakpoint(large) {
+         @include grid-column-position(center);
+        @include grid-col-size(7);
+      }
+    }
+    footer .column {
+      @include breakpoint(large) {
+         @include grid-column-position(center);
+        @include grid-col-size(5);
+      }
+    }
+
+    .content-body-wrapper {
+      @include section-separator-arrow($very-light-gray, 59);
+      p {
+        line-height: 1.4;
+        margin-bottom: rem-calc(40);
+      }
+    }
+
+    footer {
+      font-size: rem-calc(18);
+      color: $medium-gray;
+      @include section-padding;
+      background-color: $white;
+    }
+  }
+
+  &.partnerships {
+    text-align: center;
+    font-size: rem-calc(16);
+    line-height: 1.4;
+    background: $black url("/img/our-expertise/partnerships.jpg") no-repeat 50% 50%/cover;
+    color: $white;
+    @include breakpoint(medium) {
+      font-size: rem-calc(24);
+      line-height: 2;
+    }
+    @include section-padding;
+    h1.separated {
+      color: $white;
+      text-transform: none;
+      &:after {
+        border-color: $white;
+      }
+    }
+    p {
+      line-height: 1.48;
+      max-width: rem-calc(740);
+      margin: 0 auto;
+    }
+    .content-body {
+      @include breakpoint(large) {
+         @include grid-column-position(center);
+        @include grid-col-size(8);
+      }
+    }
+  }
+  &.why-talent-like-us {
+    @include section-padding;
+    text-align: center;
+    line-height: 1.4;
+    .content-body {
+      @include breakpoint(large) {
+        @include grid-column-position(center);
+        @include grid-col-size(7);
+      }
+    }
+    .sidelines {
+      font-size: rem-calc(18);
+      @include elastic-font-size($min-font: 18, $max-font: 24, $min-width: 640, $max-width: 1440);
+      @include breakpoint(xxlarge) {
+        font-size: rem-calc(24);
+      }
+    }
+    .separated {
+      font-size: rem-calc(33);
+      @include elastic-font-size($min-font: 33, $max-font: 65, $min-width: 640, $max-width: 1440);
+      @include breakpoint(xxlarge) {
+        font-size: rem-calc(65);
+      }
+      padding-bottom: 2.8125rem;
+      text-transform: uppercase;
+    }
+    .job-openings {
+      background-color: $very-light-gray;
+      h2 {
+        margin-top: rem-calc(77);
+      }
+      .results {
+        h2 {
+          margin-top: 0;
+        }
+        .job-item {
+          background-color: $white;
+          border-bottom: none;
+          margin-bottom: rem-calc(26);
+          padding: rem-calc(16 30);
+        }
+      }
+      .next-page-trigger {
+        width: 16%;
+        @include breakpoint(medium only) {
+          width: 20%;
+        }
+        @include breakpoint(small only) {
+          width: 44%;
+        }
+      }
+    }
+    &.why-talent-detail {
+      padding-bottom: 0;
+      .separated {
+        font-size: rem-calc(18);
+        @include elastic-font-size($min-font: 18, $max-font: 24, $min-width: 640, $max-width: 1440);
+        @include breakpoint(xxlarge) {
+          font-size: rem-calc(24);
+        }
+      }
+      .section-blocks {
+        min-height: 0;
+        section {
+          background-color: none;
+          box-shadow: none;
+        }
+      }
+      .talent-block {
+        text-align: left;
+        border-bottom: rem-calc(1) solid $light-gray;
+        .separated {
+          text-align: left;
+          padding: 0 2rem;
+          &:after {
+            margin-left: 0;
+            width: 10%;
+          }
+        }
+        img {
+          padding: rem-calc(50 0);
+        }
+        p {
+          font-weight: $global-weight-light;
+          line-height: 2;
+          padding: 0 2rem;
+        }
+        .title-block {
+          font-weight: $global-weight-bold;
+          display: block;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &.partnerships-page {
+    @include section-padding;
+    text-align: center;
+    line-height: 1.4;
+    .content-body {
+      @include breakpoint(large) {
+         @include grid-column-position(center);
+        @include grid-col-size(7);
+      }
+    }
+    .partner-logo {
+      min-height:  rem-calc(250);
+      padding: rem-calc(8);
+      @include breakpoint(large) {
+        min-height: rem-calc(154);
+        padding: rem-calc(0 40);
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  &.who-we-are {
+    @include section-padding;
+    text-align: center;
+    line-height: 1.4;
+    .content-body {
+      @include breakpoint(large) {
+        @include grid-column-position(center);
+        @include grid-col-size(7);
+      }
+    }
+    @include breakpoint(medium) {
+      line-height: 2;
+    }
+    h1.separated {
+      line-height: 1.2;
+      text-transform: none;
+    }
+    h2.separated {
+      margin-top: rem-calc(22);
+    }
+    p {
+      line-height: 1.4;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem-calc(720);
+    }
+    &.mission {
+      margin-top: rem-calc(20);
+      margin-bottom: rem-calc(10);
+      border: 1px solid $light-gray;
+      h1.separated {
+        padding-bottom: rem-calc(22);
+      }
+      h2.separated {
+        margin-top: rem-calc(9);
+      }
+      @include breakpoint(large) {
+        @include grid-column-position(center);
+        @include grid-col-size(10);
+        margin-top: rem-calc(120);
+        margin-bottom: rem-calc(110);
+        h1.separated {
+          padding-bottom: rem-calc(55);
+        }
+        h2.separated {
+          margin-top: rem-calc(18);
+        }
+      }
+    }
+    &.vision {
+      color: $white;
+      position: relative;
+      z-index: -2;
+      background-color: $secondary-color;
+      overflow: hidden;
+      .tagline-background {
+        color: #f1931c;
+        overflow: inherit;
+        font-size: 21vw;
+        top: rem-calc(-29);
+        letter-spacing: 1rem;
+        left: 0;
+        width: 100%;
+        @include breakpoint(large) {
+          top: rem-calc(-58);
+          letter-spacing: 2rem;
+        }
+      }
+      .section-blocks {
+        min-height: 0;
+      }
+      .separated {
+        @include breakpoint(large) {
+          @include grid-column-position(center);
+          @include grid-col-size(9);
+        }
+      }
+      h1.separated {
+        color: $white;
+        padding-top: rem-calc(24);
+        &:after {
+          opacity: 0.05;
+        }
+      }
+      h2.separated {
+        color: $black;
+        &:after {
+          border-color: $white;
+        }
+      }
+    }
+    &.history {
+      @include section-separator-arrow($white, -709);
+      padding-bottom: 0;
+      margin-bottom: rem-calc(-50);
+      .button {
+        margin-bottom: rem-calc(42);
+      }
+      footer {
+        margin-top: rem-calc(60);
+        background: $black url("/img/who-we-are/who-we-are-bg.jpg") no-repeat 50% 50%/cover;
+        min-height: rem-calc(720);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: $white;
+          font-size: rem-calc(30);
+          font-weight: 100;
+          text-transform: uppercase;
+          line-height: 1;
+          width: 100%;
+          max-width: rem-calc(550);
+          @include breakpoint(medium) {
+            font-size: rem-calc(40);
+          }
+          @include breakpoint(large) {
+            text-align: left;
+            margin-left: 43vmin;
+            @include grid-col-size(7);
+          }
+          @include breakpoint(xlarge) {
+            margin-left: 48vmin;
+          }
+        }
+        p:last-of-type {
+          color: $secondary-color;
+          font-size: rem-calc(45);
+          font-weight: 900;
+          @include breakpoint(medium) {
+            font-size: rem-calc(60);
+          }
+        }
+      }
+    }
+  }
+
+  &.privacy-policy {
+    @include section-padding;
+    padding: rem-calc(0 30);
+    text-align: left;
+    h1,
+    h2 {
+      text-align: left;
+    }
+    h2.separated:after {
+      margin-left: 0;
+    }
+    .date {
+      font-style: $header-font-style;
+    }
+  }
+}

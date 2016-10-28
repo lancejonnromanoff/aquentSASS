@@ -1,0 +1,131 @@
+.what-were-doing {
+  background-color: $light-gray;
+  .section-blocks {
+    z-index: 0;
+    position: relative;
+    top: 0;
+    min-height: 0;
+    text-align: center;
+    section {
+      margin: rem-calc(150) 0;
+      background-color: rgba(255,255,255,0.5);
+      box-shadow: 0 0 rem-calc(15) 0 rgba(0,0,0,0.1);
+      h1 {
+        color: $white;
+        font-family: $body-font-family;
+        font-style: normal;
+        font-size: rem-calc(36);
+        font-weight: $global-weight-bold;
+        .sidelines {
+          font-family: $header-font-family;
+          font-size: rem-calc(24);
+          font-style: italic;
+          font-weight: $global-weight-bold;
+        }
+      }
+      p {
+        padding: 0 2rem;
+      }
+      div {
+        @include section-padding;
+      }
+      p {
+        font-size: rem-calc(32);
+        line-height: 1.4;
+      }
+      .talent-pool {
+        padding: 7rem 0;
+      }
+    }
+    section:first-of-type {
+      margin-top: 7.25rem;
+    }
+    section:last-of-type {
+      margin-bottom: 7.25rem;
+    }
+    h2.separated {
+      @include separated(50, 4%, $secondary-color, 1, 3, 6);
+      &:after {
+        width: 11%;
+        margin-bottom: rem-calc(30);
+      }
+    }
+    p.secondary-info {
+      font-size: rem-calc(18);
+    }
+    .featured {
+      background: rgba($very-dark-gray, 0.75) no-repeat 50% 50%/cover;
+      padding-bottom: 0
+    }
+    .excerpt {
+      background-color: rgba($very-dark-gray, 0.75);
+      padding: rem-calc(20 10 2);
+      margin-top: 12.5rem;
+      margin-left: 0;
+      margin-right: 0;
+      p {
+        color: $white;
+        font-size: rem-calc(18);
+      }
+    }
+    .button {
+      margin-top: rem-calc(40);
+    }
+  }
+  .title {
+    height: 100%;
+    min-height: rem-calc(490);
+  }
+  .blog-block {
+    position: relative;
+    .blog-intro {
+      padding-bottom: 0;
+    }
+  }
+  .gymnasium-block {
+    position: relative;
+    .featured {
+      background: rgba($very-dark-gray, 0.75) no-repeat 50% 50%/cover;
+    }
+    .excerpt {
+      margin-top: 15rem;
+    }
+    .gymnasium-intro {
+      padding: rem-calc(30 0 0)
+    }
+  }
+  .line-break {
+    display: block;
+  }
+  .tagline-background {
+    z-index: 0;
+    position: absolute;
+    top: 10.8rem;
+    left: -14.75rem;
+    width: 118%;
+    font-size: rem-calc(300);
+    color: #e5e6e7;
+    font-family: $header-font-family;
+    font-weight: $global-weight-extra-bold;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.8;
+    .right {
+      text-align: right;
+    }
+  }
+  .gymnasium-tag {
+    color: $very-light-gray;
+    left: -2.75rem;
+    line-height: 0.8;
+    top: 50.875rem;
+    z-index: 0;
+    @include breakpoint(medium only) {
+      top: 85rem;
+    }
+    @include breakpoint(small only) {
+      top: 92rem;
+      display: none;
+    }
+  }
+}
